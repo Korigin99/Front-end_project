@@ -5,7 +5,7 @@ canvas.width = window.innerWidth - 100;
 canvas.height = window.innerHeight - 300;
 
 var img2 = new Image();
-img2.src = "dinosaur.png";
+img2.src = "../image/dinosaur.png";
 
 var dino = {
   x: 100,
@@ -19,7 +19,7 @@ var dino = {
   },
 };
 var img1 = new Image();
-img1.src = "cactus.png";
+img1.src = "../image/cactus.png";
 
 class Cactus {
   constructor() {
