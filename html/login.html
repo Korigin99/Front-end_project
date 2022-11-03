@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-wrap"><a href="index.html"><img id="img" src="title.png" /></a></div>
+    </header>
+    <div class="content">
+        <div class="login-wrap">
+            <form method="post" action="/process/login">
+                <div class="id-wrap">
+                    <input type="text" id="id" name="id" placeholder="아이디">
+                </div>
+                <div class="pw-wrap">
+                    <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                </div>
+                <div class="alert-wrap"></div>
+                <div class="bt-wrap">
+                    <input type="submit" value="로그인" id="login-bt">
+                </div>
+                <div class="login-info-wrap">
+                    <a href="join.html">회원가입</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../js/login.js"></script>
+<script>
+    // window.onload = $('#login-bt').attr("onclick", "loginCheck()");
+
+    function loginCheck() {
+        // 아이디, 비밀번호 빈칸 확인
+        if ($('#id').val() == "") {
+            $('.alert-wrap').html("아이디를 입력하세요");
+            return;
+        }
+        else if ($('#pw').val() == "") {
+            $('.alert-wrap').html("비밀번호를 입력하세요");
+            return;
+        }
+
+        // 출력한 메시지 초기화
+        $('#id').click(function () {
+            $('.alert-wrap').html("");
+        });
+        $('#pw').click(function () {
+            $('.alert-wrap').html("");
+        });
+    }
+</script>
+
+</html>

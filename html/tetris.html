@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <link rel="stylesheet" type="text/css" href="tetris.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#a").on("click", function () {
+                $("#games").stop().slideToggle("fast");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="init.css" />
+    <link rel="stylesheet" href="default.css" />
+</head>
+
+<body>
+    <div id="body">
+        <header id="header">
+            <div style="text-align: center">
+                <a href="index.html"><img id="img" src="title.png" /></a>
+            </div>
+            <nav>
+                <div id="menu">
+                    <div><a href="main.html"> HOME</a></div>
+                    <div id="a">
+                        GAME
+                        <ul id="games">
+                            <li><a href="">MAZE GAME</a></li>
+                            <li><a href="">APPLE GAME</a></li>
+                            <li><a href="">TAG GAME</a></li>
+                            <li><a href="">BINGO GAME</a></li>
+                            <li><a href="2048.html">2048 GAME</a></li>
+                        </ul>
+                    </div>
+                    <div>JOIN US</div>
+                    <div>LOG IN / OUT</div>
+                </div>
+            </nav>
+        </header>
+        <div id="content">
+            <div id="gameField">
+                <div id="gameDisplay">
+                    <div class="game_logo_dp"><img src="tetris.png" alt=""></div>
+                </div>
+                <div class="gameInfo">
+                    <div id="game_title">
+                        <div class="game_logo"><img src="tetris.png" alt=""></div>
+                    </div>
+                    <div id="scoreField">
+                        <div class="sub_box button">
+                            <button onclick="gameStart()">게임 하기</button>
+                        </div>
+                        <div class="sub_box">
+                            <h3>LEVEL</h3>
+                            <p id="level">1</p>
+                        </div>
+                        <div class="sub_box">
+                            <h3>SCORE</h3>
+                            <p id="score">0</p>
+                        </div>
+                        <div class="sub_box">
+                            <h3>NEXT</h3>
+                            <table id="nextTable" border=0>
+                                <tr>
+                                    <td id="00"></td>
+                                    <td id="01"></td>
+                                    <td id="02"></td>
+                                    <td id="03"></td>
+                                </tr>
+                                <tr>
+                                    <td id="10"></td>
+                                    <td id="11"></td>
+                                    <td id="12"></td>
+                                    <td id="13"></td>
+                                </tr>
+                                <tr>
+                                    <td id="20"></td>
+                                    <td id="21"></td>
+                                    <td id="22"></td>
+                                    <td id="23"></td>
+                                </tr>
+                                <tr>
+                                    <td id="30"></td>
+                                    <td id="31"></td>
+                                    <td id="32"></td>
+                                    <td id="33"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameover">
+                <span>Game Over
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="tetris.js"></script>
+
+</html>

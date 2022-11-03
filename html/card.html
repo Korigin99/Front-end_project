@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드 뒤집기</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $("#a").on("click", function () {
+        $("#games").stop().slideToggle("fast");
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="init.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+  <div id="body">
+    <header id="header">
+      <div style="text-align: center">
+        <a href="index.html"><img id="img" src="title.png" /></a>
+      </div>
+      <nav>
+        <div id="menu">
+          <div><a href="main.html"> HOME</a></div>
+          <div id="a">
+            GAME
+            <ul id="games">
+              <li><a href="">MAZE GAME</a></li>
+              <li><a href="">APPLE GAME</a></li>
+              <li><a href="">TAG GAME</a></li>
+              <li><a href="">BINGO GAME</a></li>
+              <li><a href="2048.html">2048 GAME</a></li>
+            </ul>
+          </div>
+          <div>JOIN US</div>
+          <div>LOG IN / OUT</div>
+        </div>
+      </nav>
+    </header>
+    <div class="content-wrap">
+      <div class="game-wrap">
+        <div class="game-display">
+          <div class="line1 line">
+            <div class="box1 box"></div>
+            <div class="box2 box"></div>
+            <div class="box3 box"></div>
+            <div class="box4 box"></div>
+          </div>
+          <div class="line2 line">
+            <div class="box5 box"></div>
+            <div class="box6 box"></div>
+            <div class="box7 box"></div>
+            <div class="box8 box"></div>
+          </div>
+          <div class="line3 line">
+            <div class="box9 box"></div>
+            <div class="box10 box"></div>
+            <div class="box11 box"></div>
+            <div class="box12 box"></div>
+          </div>
+          <div class="line4 line">
+            <div class="box13 box"></div>
+            <div class="box14 box"></div>
+            <div class="box15 box"></div>
+            <div class="box16 box"></div>
+          </div>
+        </div>
+        <div class="game-bt">
+          <button class="bt">게임 시작</button>
+        </div>
+        <div class="game-over">
+          <span id="won">YOU WON!!!</span>
+          <span id="click-cnt"></span>
+          <br> F5 to restart
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="card.js"></script>
+
+</html>

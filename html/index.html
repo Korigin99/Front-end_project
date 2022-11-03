@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👑 SNACK GAME</title>
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $("#a").on("click", function () {
+        $("#games").stop().slideToggle("fast");
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="init.css" />
+  <link rel="stylesheet" href="default.css" />
+
+  <body>
+    <div id="body">
+      <header id="header">
+        <div style="text-align: center">
+          <a href="index.html"><img id="img" src="title.png" /></a>
+        </div>
+        <nav>
+          <div id="menu">
+            <div><a href="index.html"> HOME</a></div>
+            <div id="a">
+              GAME
+              <ul id="games">
+                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              </ul>
+            </div>
+            <div>JOIN US</div>
+            <div>LOG IN / OUT</div>
+          </div>
+        </nav>
+      </header>
+      <div id="game2">
+        <a href="wordle.html"
+          ><div class="wordle game">
+            <img style="margin-top: 15px" src="wordle.png" />
+          </div>
+        </a>
+        <a href="fruit.html"
+          ><div class="fruit game">
+            <img style="margin-top: 10px" src="fruit.png" /></div
+        ></a>
+      </div>
+      <div id="game">
+        <a href="maze.html"
+          ><div class="maze game">
+            <img style="margin-top: 10px" src="maze.png" /></div
+        ></a>
+        <a href="tetris.html"
+          ><div class="tetris game">
+            <img style="margin-top: 15px" src="tetris.png" /></div
+        ></a>
+        <a href="chick.html"
+          ><div class="chick game">
+            <img style="margin-top: 15px" src="chick.png" /></div
+        ></a>
+      </div>
+      <div id="game2">
+        <a href="hangman.html"
+          ><div class="hangman game">
+            <img style="margin-top: 15px" src="hangman.png" />
+          </div>
+        </a>
+        <a href="2048.html"
+          ><div class="2048 game">
+            <img style="margin-top: 10px" src="2048.PNG" /></div
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

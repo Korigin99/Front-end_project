@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta charset="utf-8" />
+    <title>run</title>
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $("#a").on("click", function () {
+        $("#games").stop().slideToggle("fast");
+      });
+    });
+  </script>
+  <script>
+    document.body.addEventListener(
+      "touchstart",
+      function (e) {
+        if (e.touches.length > 1 || e.targetTouches.length > 1) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+      },
+      { passive: false }
+    );
+  </script>
+
+  <link rel="stylesheet" href="init.css" />
+  <link rel="stylesheet" href="default.css" />
+  <style>
+    img {
+      width: 500px;
+      margin: 0 auto;
+    }
+    #game_run {
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #canvas {
+      border: 1px solid black;
+      width: 800px;
+      height: auto;
+      background-image: url("background.png");
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <header id="header">
+      <div style="text-align: center">
+        <a href="index.html"><img id="img" src="title.png" /></a>
+      </div>
+      <nav>
+        <div id="menu">
+          <div><a href="index.html"> HOME</a></div>
+          <div id="a">
+            GAME
+            <ul id="games">
+              <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+              <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+              <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+              <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+              <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+              <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+              <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+            </ul>
+          </div>
+          <div>JOIN US</div>
+          <div>LOG IN / OUT</div>
+        </div>
+      </nav>
+    </header>
+    <div style="width: 500px; margin: 0 auto">
+      <img src="chick_title.png" />
+    </div>
+    <div id="game_run">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="chick.js"></script>
+  </body>
+</html>

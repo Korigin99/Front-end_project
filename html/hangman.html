@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hangman game</title>
+
+    <link rel="stylesheet" href="hangman.css" />
+    <script src="hangman.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#a").on("click", function () {
+          $("#games").stop().slideToggle("fast");
+        });
+      });
+    </script>
+    <script>
+      document.body.addEventListener(
+        "touchstart",
+        function (e) {
+          if (e.touches.length > 1 || e.targetTouches.length > 1) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+        },
+        { passive: false }
+      );
+    </script>
+
+    <link rel="stylesheet" href="init.css" />
+    <link rel="stylesheet" href="default.css" />
+  </head>
+
+  <body>
+    <div id="body">
+      <header id="header">
+        <div style="text-align: center">
+          <a href="index.html"><img id="img" src="title.png" /></a>
+        </div>
+        <nav>
+          <div id="menu">
+            <div><a href="index.html"> HOME</a></div>
+            <div id="a">
+              GAME
+              <ul id="games">
+                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              </ul>
+            </div>
+            <div>JOIN US</div>
+            <div>LOG IN / OUT</div>
+          </div>
+        </nav>
+      </header>
+      <div class="body">
+        <div id="wrap">
+          <p class="title">Hangman</p>
+          <p class="description">
+            Use the alphabet below to guess the word, <br />or click hint to ge
+            a clue.
+          </p>
+          <div id="buttons"></div>
+          <div id="categoryName"></div>
+          <div id="hold"></div>
+          <div id="mylives"></div>
+          <div id="clue"></div>
+          <canvas id="stickman"></canvas>
+          <div>
+            <button id="hint">hint</button>
+            <button id="reset">play again</button>
+          </div>
+        </div>
+
+        <div>
+          <div id="dis_wrap">
+            <div id="dis">
+              <p>
+                <b> -- 행맨게임 -- </b><br />
+                영어 단어 맞히기 게임 중 하나로, 알파벳을 선택하여 단어를 맞추면
+                된다.<br />
+                단어 안에 선택한 알파벳이 있으면 해당 알파벳으로 단어가
+                채워지고, 알파벳이 없을 경우 라이프가 하나 깎인다.<br />
+              </p>
+            </div>
+            <div id="dis">
+              <p>
+                <b>* 패배</b> : 라이프가 깎일 때마다 행맨이 그려지며, 라이프가
+                모두 사용되면 게임에서 지게 된다.<br /><br />
+                <b>* 승리</b> : 라이프가 깎이기 전에 단어를 맞추면 승리할 수
+                있다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

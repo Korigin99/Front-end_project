@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="join.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-wrap"><a href="index.html"><img id="img" src="title.png" /></a></div>
+    </header>
+    <div class="content-wrap">
+        <div class="join-wrap">
+            <form method="post" action="/process/join">
+                <div class="id-wrap join-box">
+                    <h3 class="join-title"><label for="">아이디</label></h3>
+                    <span class="id-box span-box">
+                        <input type="text" id="id" class="ipt" name="id">
+                        <span class="id-span span">❕</span>
+                    </span>
+                    <span class="id-alert alert-wrap"></span>
+                </div>
+                <div class="pw-wrap join-box">
+                    <h3 class="join-title"><label for="">비밀번호</label></h3>
+                    <span class="pw1-box span-box">
+                        <input type="password" id="pw1" class="ipt" name="password">
+                        <span class="pw1-span span">❕</span>
+                    </span>
+                    <span class="pw1-alert alert-wrap"></span>
+                </div>
+                <div class="pw-check-wrap join-box">
+                    <h3 class="join-title pw-check"><label for="">비밀번호 재확인</label></h3>
+                    <span class="pw2-box span-box">
+                        <input type="password" id="pw2" class="ipt">
+                        <span class="pw2-span span">❕</span>
+                    </span>
+                    <span class="pw2-alert alert-wrap"></span>
+                </div>
+                <div class="name-wrap join-box">
+                    <h3 class="join-title"><label for="">이름</label></h3>
+                    <span class="name-box span-box">
+                        <input type="text" id="name" class="ipt" name="name">
+                        <span class="name-span span">❕</span>
+                    </span>
+                    <span class="name-alert alert-wrap"></span>
+                </div>
+                <div class="email-wrap join-box">
+                    <h3 class="join-title"><label for="">이메일</label></h3>
+                    <span class="email-box span-box">
+                        <input type="email" id="email" class="ipt" name="email">
+                        <span class="email-span span">❕</span>
+                    </span>
+                    <span class="email-alert alert-wrap"></span>
+                </div>
+                <div class="join-bt-wrap join-box">
+                    <input type="submit" value="가입하기" id="join-button">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var id = false;
+    var pw1 = false;
+    var pw2 = false;
+    var name = false;
+    var email = false;
+
+    $(document).ready($('.ipt').click(function () {
+        var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+        var getCheck = RegExp(/^[a-zA-Z0-9]{4,12}$/);
+        var getName = RegExp(/^[가-힣]+$/);
+
+        $('.' + this.id + '-box').css('border', '1px solid #2c70ee');
+
+
+        /* ($('.ipt').blur(function () {
+            if ($(this).val() == "") {
+                $('.' + this.id + '-box').css('border', '1px solid red');
+                $('.' + this.id + '-alert').html('필수 입력 정보입니다!');
+                $('.' + this.id + '-alert').css('color', 'red');
+                $('.' + this.id + '-span').html("❗");
+                return false;
+            }
+        })); */
+
+        // 아이디
+        ($('#id').blur(function () {
+            // 공백 확인
+            if ($('#id').val() == "") {
+                $('.id-box').css('border', '1px solid red');
+                $('.id-alert').html('필수 입력 정보입니다!');
+                $('.id-alert').css('color', 'red');
+                $('.id-span').html("❗");
+                return false;
+            }
+            //아이디 유효성검사
+            if (!getCheck.test($("#id").val())) {
+                $(".id-box").css('border', '1px solid red');
+                $(".id-alert").html("알파벳 또는 숫자로만 구성해주세요(4~12)자리");
+                $(".id-alert").css('color', 'red');
+                $(".id-span").html("❗");
+                return false;
+            } else {
+                $(".id-box").css('border', '1px solid #2c70ee');
+                $(".id-alert").html("멋진 아이디네요!");
+                $(".id-alert").css('color', '#2c70ee');
+                $(".id-span").html("✔");
+                id = true;
+            }
+        }));
+
+        // 비밀번호 1
+        ($('#pw1').blur(function () {
+            // 공백확인
+            if ($('#pw1').val() == "") {
+                $('.pw1-box').css('border', '1px solid red');
+                $('.pw1-alert').html('필수 입력 정보입니다!');
+                $('.pw1-alert').css('color', 'red');
+                $('.pw1-span').html("❗");
+                return false;
+            }
+            //아이디 비밀번호 같음 확인
+            if ($("#id").val() == $("#pw1").val()) {
+                $(".pw1-box").css('border', '1px solid red');
+                $(".pw1-alert").html("아이디와 비밀번호가 똑같습니다!");
+                $(".pw1-alert").css('color', 'red');
+                $(".pw1-span").html("❗");
+                return false;
+            }
+            //비밀번호 유효성검사
+            if (!getCheck.test($("#pw1").val())) {
+                $(".pw1-box").css('border', '1px solid red');
+                $(".pw1-alert").html("알파벳 또는 숫자로만 구성해주세요(4~12)자리");
+                $(".pw1-alert").css('color', 'red');
+                $(".pw1-span").html("❗");
+                return false;
+            } else {
+                $(".pw1-box").css('border', '1px solid #2c70ee');
+                $(".pw1-alert").html("훌륭한 비밀번호에요!");
+                $(".pw1-alert").css('color', '#2c70ee');
+                $(".pw1-span").html("✔");
+                pw1 = true;
+            }
+        }));
+
+        // 비밀번호 확인
+        ($('#pw2').blur(function () {
+            // 공백확인
+            if ($('#pw2').val() == "") {
+                $('.pw2-box').css('border', '1px solid red');
+                $('.pw2-alert').html('필수 입력 정보입니다!');
+                $('.pw2-alert').css('color', 'red');
+                $('.pw2-span').html("❗");
+                return false;
+            }
+            //비밀번호 서로확인
+            if ($("#pw1").val() != $("#pw2").val()) {
+                $(".pw1-box").css('border', '1px solid red');
+                $(".pw1-alert").html("비밀번호 불일치!");
+                $(".pw1-alert").css('color', 'red');
+                $(".pw1-span").html("❗");
+                $(".pw2-box").css('border', '1px solid red');
+                $(".pw2-alert").html("비밀번호 불일치!");
+                $(".pw2-alert").css('color', 'red');
+                $(".pw2-span").html("❗");
+                return false;
+            } else {
+                $(".pw1-box").css('border', '1px solid #2c70ee');
+                $(".pw1-alert").html("훌륭한 비밀번호에요!");
+                $(".pw1-alert").css('color', '#2c70ee');
+                $(".pw1-span").html("✔");
+                $(".pw2-box").css('border', '1px solid #2c70ee');
+                $(".pw2-alert").html("비밀번호 일치!");
+                $(".pw2-alert").css('color', '#2c70ee');
+                $(".pw2-span").html("✔");
+                if ($("#id").val() == $("#pw1").val()) {
+                    $(".pw1-box").css('border', '1px solid red');
+                    $(".pw1-alert").html("아이디와 비밀번호가 똑같습니다!");
+                    $(".pw1-alert").css('color', 'red');
+                    $(".pw1-span").html("❗");
+                    return false;
+                }
+            }
+        }));
+
+        // 이름
+        ($('#name').blur(function () {
+            // 공백확인
+            if ($('#name').val() == "") {
+                $('.name-box').css('border', '1px solid red');
+                $('.name-alert').html('필수 입력 정보입니다!');
+                $('.name-alert').css('color', 'red');
+                $('.name-span').html("❗");
+                return false;
+            }
+            //이름 유효성 검사
+            if (!getName.test($("#name").val())) {
+                $(".name-box").css('border', '1px solid red');
+                $(".name-alert").html("한글로만 입력해주세요");
+                $(".name-alert").css('color', 'red');
+                $(".name-span").html("❗");
+                return false;
+            } else {
+                $(".name-box").css('border', '1px solid #2c70ee');
+                $(".name-alert").html("멋진 이름이에요!");
+                $(".name-alert").css('color', '#2c70ee');
+                $(".name-span").html("✔");
+                name = true;
+            }
+        }));
+
+        ($('#email').blur(function () {
+            //이메일 공백 확인
+            if ($('#email').val() == "") {
+                $('.email-box').css('border', '1px solid red');
+                $('.email-alert').html('필수 입력 정보입니다!');
+                $('.email-alert').css('color', 'red');
+                $('.email-span').html("❗");
+                return false;
+            }
+            //이메일 유효성 검사
+            if (!getMail.test($("#email").val())) {
+                $(".email-box").css('border', '1px solid red');
+                $(".email-alert").html("이메일이 양식이 올바르지 않습니다!");
+                $(".email-alert").css('color', 'red');
+                $(".email-span").html("❗");
+                return false;
+            } else {
+                $(".email-box").css('border', '1px solid #2c70ee');
+                $(".email-alert").html("멋진 이메일이에요!");
+                $(".email-alert").css('color', '#2c70ee');
+                $(".email-span").html("✔");
+                email = true;
+            }
+        }));
+    }));
+</script>
+
+</html>
