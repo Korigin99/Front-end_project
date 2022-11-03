@@ -45,7 +45,8 @@ td{
 .gameInfo{
     width: 20%;
     height: 40%;
-    border: 1px solid #2c70ee;
+    border: 3px solid #2c70ee;
+    border-radius: 20px;
     color: #2c70ee;
 }
 
@@ -86,7 +87,8 @@ button {
 
 #gameTable{
     z-index: 9;
-    border: 1px solid #2c70ee;
+    border: 3px solid #2c70ee;
+    border-radius: 20px;
 }
 
 #game_title{
@@ -104,4 +106,20 @@ button {
 
 .game_logo_dp{
     z-index: 999;
+}
+
+.a462{
+    border-top-left-radius: 20px;
+}
+
+.a481{
+    border-top-right-radius: 20px;
+}
+
+.a902{
+    border-bottom-left-radius: 20px;
+}
+
+.a921{
+    border-bottom-right-radius: 20px;
 }

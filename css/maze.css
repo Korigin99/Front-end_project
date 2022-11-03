@@ -21,17 +21,20 @@
   width: 100%;
   height: 100%;
   display: flex;
-  
+  justify-content: space-between;
 }
 
 .rule_wrap{
-  width: 20%;
+  width: 18%;
+  height: auto;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
 }
 
 .content_wrap {
   width: 80%;
-  border: 1px solid #2c70ee;
-
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
 }
 
 .mainLine {
@@ -105,4 +108,20 @@ button:hover{
 
 .explan p{
   padding: 15px;
+}
+
+#subLine0{
+  border-top-left-radius: 20px;
+}
+
+#subLine9{
+  border-top-right-radius: 20px;
+}
+
+#subLine90{
+  border-bottom-left-radius: 20px;
+}
+
+#subLine99{
+  border-bottom-right-radius: 20px;
 }

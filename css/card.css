@@ -6,7 +6,7 @@
 .game-wrap {
   width: 800px;
   height: 800px;
-  border: 1px solid #2c70ee;
+  /* border: 1px solid #2c70ee; */
   border-radius: 10px;
   margin: 0 auto;
   position: relative;
@@ -19,6 +19,8 @@
   flex-direction: column;
   position: relative;
   perspective: 300px;
+  border: 3px solid #2C70EE;
+  border-radius: 20px;
 }
 
 .game-bt {
@@ -34,7 +36,7 @@
 .game-bt button {
   width: 200px;
   height: 50px;
-  border: 1px solid #2c70ee;
+  border: 3px solid #2c70ee;
   background-color: #2C70EE;
   color: #ffffff;
   cursor: pointer;
