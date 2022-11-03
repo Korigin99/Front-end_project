@@ -1,0 +1,130 @@
+/* login.css */
+
+body,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* header */
+
+#header {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.logo-wrap{
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo-wrap > a{
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#img {
+    max-width: 100%;
+    margin: 15px 0;
+}
+
+/* section */
+.content {
+    width: 300px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.login-wrap {
+    border: 1px solid #2c70ee;
+    border-radius: 10PX;
+    height: auto;
+    width: 94%;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+.id-wrap,
+.pw-wrap {
+    width: 100%;
+    height: 34px;
+    text-align: center;
+}
+
+.id-wrap {
+    margin-top: 50px;
+}
+
+#id,
+#pw {
+    width: 80%;
+    height: 30px;
+    padding-left: 15PX;
+    padding-right: 15PX;
+    outline: none;
+    border: 1px solid #CFCFCF;
+}
+
+#id {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#pw {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#id:focus,
+#pw:focus {
+    border: 1px solid #2c70ee;
+}
+
+.alert-wrap {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: red;
+}
+
+.bt-wrap {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+#login-bt {
+    width: 90%;
+    height: 40px;
+    background: #fff;
+    color: #2c70ee;
+    border: 1px solid #2c70ee;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: #2c70ee;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.login-info-wrap {
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: black;
+}

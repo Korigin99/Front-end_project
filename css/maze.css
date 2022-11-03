@@ -1,0 +1,108 @@
+
+.container {
+  width: 1200px;
+  height: 800px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title_wrap {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.game_wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+}
+
+.rule_wrap{
+  width: 20%;
+}
+
+.content_wrap {
+  width: 80%;
+  border: 1px solid #2c70ee;
+
+}
+
+.mainLine {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+.subLine {
+  width: 10%;
+  height: 100%;
+  line-height: 71px;
+  font-size: 50px;
+  text-align: center;
+
+}
+
+.timeDP {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bt_wrap{
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.bt_wrap button{
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #2c70ee;
+  background: white;
+  color: #2c70ee;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hint_wrap{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button:hover{
+  border: 1px solid #2c70ee;
+  background: #2c70ee;
+  color: white;
+  cursor: pointer;
+}
+
+.explan{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.explan h3{
+  text-align: center;
+}
+
+.explan p{
+  padding: 15px;
+}

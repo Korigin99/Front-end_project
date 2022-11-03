@@ -1,0 +1,107 @@
+
+
+#content{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+#gameField{
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+td{
+    width: 30px;
+    height: 28px;
+}
+
+#gameover{
+    position: absolute;
+    width: 280px;
+    padding: 30px 10px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    visibility: hidden;
+    color: white;
+    background: #2c70ee;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#gameDisplay{
+    width: 80%;
+    height: auto;
+}
+
+.gameInfo{
+    width: 20%;
+    height: 40%;
+    border: 1px solid #2c70ee;
+    color: #2c70ee;
+}
+
+#scoreField{
+    width: 100%;
+    height: auto;
+}
+
+#nextTable{
+    margin: 0 auto;
+}
+
+.sub_box{
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+.sub_box h3{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.sub_box p{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+button {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid #2c70ee;
+    color: #2c70ee;
+    background: white;
+}
+
+#gameTable{
+    z-index: 9;
+    border: 1px solid #2c70ee;
+}
+
+#game_title{
+    width: 100%;
+    height: auto;
+}
+
+.game_logo{
+    width: 100%;
+}
+
+.game_logo img{
+    width: 100%;
+}
+
+.game_logo_dp{
+    z-index: 999;
+}
