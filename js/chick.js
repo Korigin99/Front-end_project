@@ -1,32 +1,74 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var score = document.getElementById("score");
-canvas.width = window.innerWidth - 100;
-canvas.height = window.innerHeight - 300;
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
+
+// canvas.width = window.innerWidth - 100;
+// canvas.height = window.innerHeight - 300;
 
 var img2 = new Image();
 img2.src = "../image/dinosaur.png";
-
+var img5 = new Image();
+img5.src = "../image/dinosaur2.png";
+var anicount = 0;
 var dino = {
-  x: 100,
-  y: 400,
-  width: 10,
-  height: 10,
+  x: 50,
+  y: 480,
+  width: 80,
+  height: 80,
   draw() {
     ctx.fillStyle = "green";
+    anicount++;
     //ctx.fillRect(this.x, this.y, this.width, this.height);
-    ctx.drawImage(img2, this.x, this.y);
+    if (anicount <= 10) ctx.drawImage(img2, dino.x, dino.y);
+    else if (anicount <= 20) {
+      ctx.drawImage(img5, dino.x, dino.y);
+    }
+    if (anicount >= 20) anicount = 0;
   },
 };
+
+var img3 = new Image();
+img3.src = "../image/cloud.png";
+class Cloud {
+  constructor() {
+    this.x = 1500;
+    this.y = 1;
+    this.width = 20;
+    this.height = 20;
+  }
+  draw() {
+    ctx.fillStyle = "blue";
+    //ctx.fillRect(this.x, this.y, this.width, this.height);
+    ctx.drawImage(img3, this.x, this.y);
+  }
+}
+var img4 = new Image();
+img4.src = "../image/sand.png";
+class Sand {
+  constructor() {
+    this.x = 1500;
+    this.y = 1;
+    this.width = 20;
+    this.height = 20;
+  }
+  draw() {
+    ctx.fillStyle = "blue";
+    //ctx.fillRect(this.x, this.y, this.width, this.height);
+    ctx.drawImage(img4, this.x, this.y);
+  }
+}
+
 var img1 = new Image();
 img1.src = "../image/cactus.png";
 
 class Cactus {
   constructor() {
     this.x = 1500;
-    this.y = 400;
-    this.width = 10;
-    this.height = 10;
+    this.y = 500;
+    this.width = 20;
+    this.height = 20;
   }
   draw() {
     ctx.fillStyle = "red";
@@ -35,20 +77,34 @@ class Cactus {
   }
 }
 
+var score = document.getElementById("score");
 var timer = 0;
 var cactuss = [];
+var clouds = [];
+var sands = [];
 var jump_timer = 0;
 var animation;
-
+var jump_count = 2;
+let count = 0;
 function ani() {
   animation = requestAnimationFrame(ani);
   timer++;
+  count++;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (timer % 100 === 0) {
+  if (timer % 200 === 0) {
     var cactus = new Cactus();
     cactuss.push(cactus);
+  }
+
+  if (timer % 100 === 0) {
+    var sand = new Sand();
+    sands.push(sand);
+  }
+  if (timer % 200 === 0) {
+    var cloud = new Cloud();
+    clouds.push(cloud);
   }
   if (timer % 450 === 0) {
     var cactus = new Cactus();
@@ -64,15 +120,23 @@ function ani() {
     attack(dino, a);
     a.draw();
   });
+  clouds.forEach((a, i, o) => {
+    a.x -= 5;
+    a.draw();
+  });
+  sands.forEach((a, i, o) => {
+    a.x -= 5;
+    a.draw();
+  });
 
   if (jump == true) {
-    dino.y -= 8;
+    dino.y -= 7;
     jump_timer += 3;
   }
 
   if (jump == false) {
-    if (dino.y < 400) {
-      dino.y += 8;
+    if (dino.y < 480) {
+      dino.y += 5;
     }
   }
 
@@ -80,14 +144,18 @@ function ani() {
     jump = false;
     jump_timer = 0;
   }
+  //천장에 닿으면 죽음
   if (dino.y == 0) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // cancelAnimationFrame(animation);
+    cancelAnimationFrame(animation);
     gameover();
   }
   dino.draw();
+  score.innerHTML = "SCORE : " + parseInt(count / 10);
+  if (dino.y >= 480) jump_count = 2;
 }
 ani();
+
 //충돌확인
 function attack(dino, cactus) {
   var dx = cactus.x - (dino.x + dino.width);
@@ -101,7 +169,10 @@ function attack(dino, cactus) {
 var jump = false;
 document.addEventListener("keydown", function (e) {
   if (e.code === "Space") {
-    jump = true;
+    if (jump_count > 0) {
+      jump = true;
+      jump_count--;
+    }
   }
 });
 

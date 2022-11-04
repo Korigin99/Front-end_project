@@ -1,0 +1,59 @@
+#game_run {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#canvas {
+  border-radius: 20px;
+  width: 900px;
+  height: 700px;
+  background-image: url("../image/background.png");
+  background-size: cover;
+  display: block;
+}
+#wrap {
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+#game_wrap {
+  width: 900px;
+  height: 700px;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
+  background-color: #00b0f0;
+  position: relative;
+}
+#dis_wrap {
+  width: 230px;
+  height: 600px;
+  padding: 0 20px;
+  margin-left: 20px;
+}
+#dis {
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+#dis p {
+  color: black;
+}
+#score {
+  width: 350px;
+  font-size: 35px;
+  font-family: "맑은 고딕";
+  font-weight: 800;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#title img {
+  position: absolute;
+  width: 700px;
+  left: 100px;
+  top: 50px;
+}

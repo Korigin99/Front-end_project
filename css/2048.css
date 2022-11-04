@@ -1,7 +1,35 @@
-#game2048 {
-  width: 500px;
-  height: 600px;
+#wrap {
+  width: 850px;
+  display: flex;
   margin: 0 auto;
+  position: relative;
+}
+
+#dis_wrap {
+  width: 230px;
+  height: 600px;
+  padding: 0 20px;
+  margin-left: 20px;
+}
+#dis {
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+#dis p {
+  color: black;
+}
+
+#game2048 {
+  width: 490px;
+  height: 540px;
+  margin: 0 auto;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
+  padding: 20px;
 }
 td {
   border: 2px solid #012466;
