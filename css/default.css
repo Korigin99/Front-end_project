@@ -3,7 +3,7 @@
 /* 기본 css */
 #body {
   width: 1200px;
-  height: 1200px;
+  height: auto;
   margin: 0 auto;
 }
 #header {
