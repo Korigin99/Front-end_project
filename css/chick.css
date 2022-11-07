@@ -16,6 +16,7 @@
   width: 1200px;
   display: flex;
   margin: 0 auto;
+  margin-top: 30px;
 }
 #game_wrap {
   width: 900px;
