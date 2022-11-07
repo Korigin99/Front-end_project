@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>👑 SNACK GAME</title>
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
   crossorigin="anonymous"></script>
 <script>
@@ -22,14 +23,14 @@
 <body>
   <div id="body">
     <header id="header">
-      <div style="text-align: center">
+      <div style="text-align: center" class="logo-wrap">
         <a href="index.html"><img id="img" src="../image/title.png" /></a>
       </div>
       <nav>
         <div id="menu">
           <div><a href="index.html"> HOME</a></div>
           <div id="a">
-            GAME
+            <span>GAME</span>
             <ul id="games">
               <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
               <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
@@ -39,52 +40,43 @@
               <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
               <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
             </ul>
+
           </div>
           <div><a href="join.html">JOIN US</a></div>
-          <div><a href="login.html"> LOG IN / OUT</a></div>
+          <div><a href="login.html"> LOG IN</a></div>
+
         </div>
       </nav>
     </header>
-    <div id="game2">
-      <a href="wordle.html">
-        <div class="wordle game">
-          <img style="margin-top: 15px" src="../image/wordle.png" />
-        </div>
-      </a>
-      <a href="fruit.html">
-        <div class="fruit game">
-          <img style="margin-top: 10px" src="../image/fruit.png" />
-        </div>
-      </a>
+    <div id="game">
+      <div class="wordle game">
+        <a href="wordle.html"><img src="../image/wordle.png"  class="game_img"/></a>
+      </div>
+      <div class="fruit game">
+        <a href="fruit.html"><img src="../image/fruit.png"  class="game_img"/></a>
+      </div>
     </div>
     <div id="game">
-      <a href="maze.html">
-        <div class="maze game">
-          <img style="margin-top: 10px" src="../image/maze.png" />
-        </div>
-      </a>
-      <a href="tetris.html">
-        <div class="tetris game">
-          <img style="margin-top: 15px" src="../image/tetris.png" />
-        </div>
-      </a>
-      <a href="chick.html">
-        <div class="chick game">
-          <img style="margin-top: 15px" src="../image/chick.png" />
-        </div>
-      </a>
+      <div class="maze game">
+        <a href="maze.html"><img src="../image/maze.png"  class="game_img"/></a>
+      </div>
+      <div class="tetris game">
+        <a href="tetris.html"> <img src="../image/tetris.png"  class="game_img"/></a>
+      </div>
+
+      <div class="chick game">
+        <a href="chick.html"><img src="../image/chick.png"  class="game_img"/></a>
+      </div>
     </div>
-    <div id="game2">
-      <a href="hangman.html">
-        <div class="hangman game">
-          <img style="margin-top: 15px" src="../image/hangman.png" />
-        </div>
-      </a>
-      <a href="2048.html">
-        <div class="2048 game">
-          <img style="margin-top: 10px" src="../image/2048.PNG" />
-        </div>
-      </a>
+    <div id="game">
+      <div class="hangman game">
+        <a href="hangman.html"> <img src="../image/hangman.png"  class="game_img"/></a>
+      </div>
+
+      <div class="2048 game">
+        <a href="2048.html"> <img src="../image/2048.PNG" class="game_img" /></a>
+      </div>
+
     </div>
   </div>
 </body>
