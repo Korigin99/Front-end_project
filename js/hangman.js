@@ -41,15 +41,14 @@ window.onload = function () {
 
   // 요소 잡기
   var showLives = document.getElementById("mylives");
-  var showCategory = document.getElementById("categoryName");
+  // var showCategory = document.getElementById("categoryName");
   var getHint = document.getElementById("hint");
   var showClue = document.getElementById("clue");
 
   // 구조를 만들어 줘야한다.
-
   var buttons = function () {
-    myButtons = document.getElementById("buttons");
-    letters = document.createElement("ul");
+    var myButtons = document.getElementById("buttons");
+    var letters = document.createElement("ul");
 
     for (var i = 0; i < alphabet.length; i++) {
       letters.id = "alphabet";
@@ -66,17 +65,14 @@ window.onload = function () {
   // 이사람은 카테고리를 크게 3개로 정해 놓았다.
   var selectCat = function () {
     if (chosenCaegory === categories[0]) {
-      categoryName.innerHTML = "This Chosen Category is 첫번째 카테고리";
+      console.log("This Chosen Category is 첫번째 카테고리");
     } else if (chosenCaegory === categories[1]) {
-      categoryName.innerHTML == "This Chosen Category is 두번째 카테고리";
+      console.log("This Chosen Category is 두번째 카테고리");
     } else if (chosenCaegory === categories[2]) {
-      categoryName.innerHTML === "This Chosen Category is 세번째 카테고리";
+      console.log("This Chosen Category is 세번째 카테고리");
     }
   };
-
   // 단어 빈칸 만들기 (구조를 그려준다.)
-  // append랑 appendchild 차이 알아보기
-  // id값을 저렇게 for문으로 추가하면 다중으로 생기지 않나??
   result = function () {
     wordHolder = document.getElementById("hold");
     correct = document.createElement("ul");
@@ -96,8 +92,7 @@ window.onload = function () {
     }
   };
 
-  // 화면에 차례대로 보일 수 있게 그려주고 있다.
-  // 생명 (기회) 그려주기
+  // 화면에 차례대로 보일 수 있게 생명 (기회) 그려주기
   comments = function () {
     showLives.innerHTML = "You have " + lives + " lives";
     if (lives < 1) {
@@ -190,7 +185,6 @@ window.onload = function () {
   // 정답 체크
   // 클릭한 카드안에 알파벳들이랑 정답이랑 글자 비교하기 indexof()
   // 맞추면 counter +, 틀리면 lives -1
-  // 왜 굳이 counter + space == guesses 를 해야 이길 수 있지??
   check = function () {
     list.onclick = function () {
       var guess = this.innerHTML;
@@ -217,24 +211,37 @@ window.onload = function () {
   play = function () {
     categories = [
       [
-        "everton",
-        "liverpool",
-        "swansea",
-        "chelsea",
-        "hull",
-        "manchester-city",
-        "newcastle-united",
+        "sparrow",
+        "hippopotamus",
+        "crocodile",
+        "chameleon",
+        "giraffe",
+        "squirrel",
+        "sea-gull",
       ],
-      ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
-      ["manchester", "milan", "madrid", "amsterdam", "prague"],
+      [
+        "persimmon",
+        "mango",
+        "watermelon",
+        "mandarin",
+        "korean-melon",
+        "strawberry",
+        "plum",
+      ],
+      [
+        "croissant",
+        "cinnamon-roll",
+        "fudge",
+        "carrot-cake",
+        "waffle",
+        "macaron",
+        "tiramisu",
+      ],
     ];
 
     chosenCaegory = categories[Math.floor(Math.random() * categories.length)];
     word = chosenCaegory[Math.floor(Math.random() * chosenCaegory.length)];
-    console.log(chosenCaegory);
-    console.log(word);
     word = word.replace(/\s/g, "-");
-    console.log(word);
     buttons();
 
     guesses = [];
@@ -248,28 +255,17 @@ window.onload = function () {
   };
 
   play();
-
-  // hint
-  // jquery 에선 index() 함수가 있었는데, index를 구하려면 indexOf()를 써야하는것인가?
-
   getHint.onclick = function () {
-    hints = [
-      ["1-0", "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8"],
-      ["2-0", "2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7", "2-8"],
-      ["3-0", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-7", "3-8"],
-    ];
-
     var categoryIndex = categories.indexOf(chosenCaegory);
-    var hintIndex = chosenCaegory.indexOf(word);
-    showClue.innerHTML = " Clue : - " + hints[categoryIndex][hintIndex];
+    if (categoryIndex == 0) showClue.innerHTML = " Clue : Animals ";
+    if (categoryIndex == 1) showClue.innerHTML = " Clue : Fruits ";
+    if (categoryIndex == 2) showClue.innerHTML = " Clue : Dessert ";
   };
 
   // reset
   document.getElementById("reset").onclick = function () {
-    correct.parentNode.removeChild(correct);
-    letters.parentNode.removeChild(letters);
-    showClue.innerHTML = "";
-    context.clearRect(0, 0, 400, 400);
-    play();
+    setTimeout(function () {
+      location.reload();
+    }, 0);
   };
 };
