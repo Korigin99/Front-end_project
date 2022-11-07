@@ -1,0 +1,72 @@
+body{ margin: 0; padding: 0; box-sizing: border-box;}
+#mask{
+    width: 600px;
+    height: auto;
+    border: 1px solid #E8D9FF;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+}
+#display_wrap{
+    width: 600px;
+    height: 200px;
+    display: flex;
+}
+#user_dp, #com_dp{
+    width: 290px;
+    height: 190px;
+    padding: 5px;
+    position: relative;
+}
+#user_dp{  border-right: 1px solid #E8D9FF;}
+#ment_wrap{
+    width: 590px;
+    height: 90px;
+    border-top: 1px solid #E8D9FF;
+    border-bottom: 1px solid #E8D9FF;
+    padding: 5px
+}
+#ment, #retry{
+    width: 590px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+#ctrl_wrap{
+    width: 600px;
+    height: 200px;
+    display: flex;
+}
+#sci_bt, #roc_bt, #pap_bt{
+    width: 190px;
+    height: 190px;
+    padding: 5px;
+    cursor: pointer;
+}
+#roc_bt{ border-right: 1px solid #E8D9FF; border-left: 1px solid #E8D9FF;}
+#user_img, #com_img{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+img{ max-width: 100%;}
+.bt:active{ border: 1px solid red;}
+#start{
+    width: 100px;
+    height:  50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background: lightblue;
+    border: none;
+    border-radius: 10px;
+}
+#start:active{
+    border: 1px solid skyblue;
+    background: white;
+    color: skyblue;
+}
