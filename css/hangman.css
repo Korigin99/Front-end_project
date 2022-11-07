@@ -8,6 +8,7 @@
   height: 650px;
   border: 3px solid #2c70ee;
   border-radius: 20px;
+  margin-top: 30px;
 }
 
 li,
@@ -93,7 +94,8 @@ canvas {
 }
 
 #dis_wrap {
-  width: 200px;
+  width: 300px;
+  margin-top: 30px;
 }
 
 #dis {

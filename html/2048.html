@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>💌 2048 GAME 💌</title>
-  </head>
-  <script
-    src="https://code.jquery.com/jquery-3.6.1.js"
-    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    $(document).ready(function () {
-      $("#a").on("click", function () {
-        $("#games").stop().slideToggle("fast");
-      });
-    });
-  </script>
-  <link rel="stylesheet" href="../css/init.css" />
-  <link rel="stylesheet" href="../css/default.css" />
-  <link rel="stylesheet" type="text/css" href="../css/2048.css" />
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <title>💌 2048 GAME 💌</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $("#a").on("click", function () {
+      $("#games").stop().slideToggle("fast");
+    });
+  });
+</script>
+<link rel="stylesheet" href="../css/init.css" />
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" type="text/css" href="../css/2048.css" />
+
+<body>
+  <div id="body">
     <header id="header">
       <div style="text-align: center">
         <a href="index.html"><img id="img" src="../image/title.png" /></a>
@@ -107,6 +106,8 @@
         </div>
       </div>
     </div>
-  </body>
-  <script type="text/javascript" src="../js/2048.js"></script>
+  </div>
+</body>
+<script type="text/javascript" src="../js/2048.js"></script>
+
 </html>
