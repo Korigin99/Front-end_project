@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <div class="container">
     <header id="header">
         <div class="logo-wrap"><a href="index.html"><img id="img" src="../image/title.png" /></a></div>
     </header>
     <div class="content">
         <div class="login-wrap">
-            <form method="post" action="/process/login">
+            <form action=""></form>
+            <!-- <form method="post" action="/process/login"> -->
                 <div class="id-wrap">
                     <input type="text" id="id" name="id" placeholder="아이디">
                 </div>
@@ -26,7 +28,7 @@
                 </div>
                 <div class="alert-wrap"></div>
                 <div class="bt-wrap">
-                    <input type="submit" value="로그인" id="login-bt">
+                    <input type="submit" value="로그인" id="login-bt" >
                 </div>
                 <div class="login-info-wrap">
                     <a href="join.html">회원가입</a>
@@ -34,10 +36,15 @@
             </form>
         </div>
     </div>
+</div>
 </body>
 <script src="../js/login.js"></script>
 <script>
     // window.onload = $('#login-bt').attr("onclick", "loginCheck()");
+
+    $(document).ready(function(){
+        $('#login-bt').click(loginCheck);
+    })
 
     function loginCheck() {
         // 아이디, 비밀번호 빈칸 확인

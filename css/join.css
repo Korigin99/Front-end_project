@@ -6,42 +6,51 @@ body, ul, li, a,h1,h2,h3,h4,h5,h6{
     text-decoration: none;
 }
 
-
-#header {
-    width: 400px;
+.container{
+    width: 360px;
     height: auto;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 5%;
+}
+
+/* header */
+
+#header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .logo-wrap{
-    width: 400px;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
 .logo-wrap > a{
     display: inline-block;
-    width: 400px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
+    cursor: pointer;
 }
 
-#img {
-    width: 400px;
-    margin: 15px 0;
+#img{
+    max-width: 100%;
+    height: auto;
 }
+
+
+/* join area */
 
 .content-wrap{
-    width: 400px;
+    width: 100%;
     height: auto;
-    margin: 30px auto;
 }
 
 .join-wrap{
     width: 100%;
     height: auto;
     margin: 0 auto;
-
 }
 
 .join-box{
@@ -53,13 +62,12 @@ body, ul, li, a,h1,h2,h3,h4,h5,h6{
 
 h3{
     text-align: left;
-    margin: 0.6rem 0;
     font-size: 1.0rem;
 }
 
 .span-box{
-    width: 88%;
-    padding: 10px 6%;
+    width: 92%;
+    padding: 10px 3.685%;
     border: 1px solid #dadada;
     display: inline-block;
     height: 30px;
@@ -97,8 +105,7 @@ h3{
 
 .alert-wrap{
     width: 92%;
-    height: 28px;
-    line-height: 28px;
+    height: 40px;
     padding: 0 4%;
     font-size: 15px;
     display: inline-block;
@@ -107,7 +114,6 @@ h3{
 }
 
 .join-bt-wrap{
-    margin-top: 30px;
     height: auto;
 }
 
