@@ -6,11 +6,33 @@ canvas.height = canvas.clientHeight;
 
 // canvas.width = window.innerWidth - 100;
 // canvas.height = window.innerHeight - 300;
+var title = new Image();
+title.src = "../image/chick_title.png";
+var title2 = new Image();
+title2.src = "../image/chicken_title.png";
+var headline = {
+  x: 100,
+  y: 50,
+  width: 100,
+  height: 100,
+  draw() {
+    if (count < 10000) {
+      ctx.drawImage(title, headline.x, headline.y);
+    } else if (count >= 10000) {
+      ctx.drawImage(title2, headline.x, headline.y + 30);
+    }
+  },
+};
 
 var img2 = new Image();
 img2.src = "../image/dinosaur.png";
 var img5 = new Image();
 img5.src = "../image/dinosaur2.png";
+var img6 = new Image();
+img6.src = "../image/chicken.png";
+var img7 = new Image();
+img7.src = "../image/chicken2.png";
+
 var anicount = 0;
 var dino = {
   x: 50,
@@ -21,11 +43,19 @@ var dino = {
     ctx.fillStyle = "green";
     anicount++;
     //ctx.fillRect(this.x, this.y, this.width, this.height);
-    if (anicount <= 10) ctx.drawImage(img2, dino.x, dino.y);
-    else if (anicount <= 20) {
-      ctx.drawImage(img5, dino.x, dino.y);
+    if (count < 10000) {
+      if (anicount <= 10) ctx.drawImage(img2, dino.x, dino.y);
+      else if (anicount <= 20) {
+        ctx.drawImage(img5, dino.x, dino.y);
+      }
+      if (anicount >= 20) anicount = 0;
+    } else if (count > 10000) {
+      if (anicount <= 10) ctx.drawImage(img6, dino.x, dino.y);
+      else if (anicount <= 20) {
+        ctx.drawImage(img7, dino.x, dino.y);
+      }
+      if (anicount >= 20) anicount = 0;
     }
-    if (anicount >= 20) anicount = 0;
   },
 };
 
@@ -90,7 +120,6 @@ function ani() {
   animation = requestAnimationFrame(ani);
   timer++;
   count++;
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   if (timer % 200 === 0) {
@@ -151,6 +180,7 @@ function ani() {
     gameover();
   }
   dino.draw();
+  headline.draw();
   score.innerHTML = "SCORE : " + parseInt(count / 10);
   if (dino.y >= 480) jump_count = 2;
 }
