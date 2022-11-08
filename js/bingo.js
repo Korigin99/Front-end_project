@@ -566,13 +566,13 @@ function restart() {
 function randomN() {
   if (flag == 1) {
     while (comNum.length < 25) {
-      var n = parseInt(Math.random() * 25) + 1;
+      var n = parseInt(Math.random() * 100) + 1;
       if (comNum.indexOf(n) < 0) {
         comNum.push(n);
       }
     }
     while (userNum.length < 25) {
-      var n = parseInt(Math.random() * 25) + 1;
+      var n = parseInt(Math.random() * 100) + 1;
       if (userNum.indexOf(n) < 0) {
         userNum.push(n);
       }
