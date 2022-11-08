@@ -289,7 +289,7 @@ function createShape() {
     el.style.background = shapeColor;
     shapeCell.push([sy, sx]);
   }
-  levelStack++;
+  
   leveling();
   movingThread = setTimeout("moveDown()", movingSpeed);
 }
@@ -436,6 +436,7 @@ function isFull(lineIndex) {
 function removeLine(lineIndex) {
   for (var i = lineIndex - 1; i >= 1; i--) {
     for (var j = 1; j < W - 1; j++) {
+      
       gebi(i + 1, j).style.background = gebi(i, j).style.background;
       existField[i + 1][j] = existField[i][j];
     }
@@ -451,6 +452,7 @@ function leveling() {
   document.getElementById("level").innerHTML = level;
 }
 function updateScore(plusScore) {
+  levelStack += 5;
   var comboScore = plusScore;
   score += comboScore;
   document.getElementById("score").innerHTML = score;
