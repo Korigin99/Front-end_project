@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👉 가위바위보! ✊</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#a").on("click", function () {
+          $("#games").stop().slideToggle("fast");
+        });
+      });
+    </script>
+    <script src="../js/default.js"></script>
+    <link rel="stylesheet" href="../css/init.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/rsp.css" />
+  </head>
+
+  <body onload="showImage()">
+    <div id="body">
+      <header id="header">
+        <div style="text-align: center">
+          <a href="index.html"><img id="img" src="../image/title.png" /></a>
+        </div>
+        <nav>
+          <div id="menu">
+            <div><a href="index.html"> HOME</a></div>
+            <div id="a">
+              GAME
+              <ul id="games">
+                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              </ul>
+            </div>
+            <div><a href="join.html">JOIN US</a></div>
+            <div><a href="login.html"> LOG IN</a></div>
+          </div>
+        </nav>
+      </header>
+      <div id="mask">
+        <div class="game-wrap">
+          <div id="display_wrap">
+            <div id="user_dp">
+              <img src="" id="user_img" />
+            </div>
+            <div id="com_dp">
+              <img src="" id="com_img" />
+            </div>
+          </div>
+          <div id="ment_wrap">
+            <div id="ment">가위바위보!</div>
+            <div id="retry">
+              <button id="start" onclick="start()">시작</button>
+            </div>
+          </div>
+          <div id="ctrl_wrap">
+            <div id="sci_bt" onclick="doClick(this)" class="bt">
+              <img src="../image/가위.png" alt="" />
+            </div>
+            <div id="roc_bt" onclick="doClick(this)" class="bt">
+              <img src="../image/바위.png" alt="" />
+            </div>
+            <div id="pap_bt" onclick="doClick(this)" class="bt">
+              <img src="../image/보.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="game-rule">
+          <h2>👉 가위바위보! ✊</h2>
+          <p>
+            user vs com <br /><br />
+            컴퓨터와 가위바위보를 해<br />
+            게임에서 승리하세요
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var u_out = document.getElementById("user_img");
+    var c_out = document.getElementById("com_img");
+    var m_out = document.getElementById("ment");
+    var st_bt = document.getElementById("start");
+
+    var imgArray = new Array();
+    imgArray[0] = "../image/가위.png"; //사진
+    imgArray[1] = "../image/바위.png"; //사진
+    imgArray[2] = "../image/보.png"; //사진
+    var flag;
+    var flag2 = 1;
+    var com = 0;
+    function showImage() {
+      if (flag2 == 1) {
+        var c_imgNum = Math.round(Math.random() * 2);
+        var u_imgNum = Math.round(Math.random() * 2);
+        c_out.src = imgArray[c_imgNum];
+        u_out.src = imgArray[u_imgNum];
+        flag = setTimeout(showImage, 500);
+        com = c_imgNum;
+      }
+    }
+
+    function doClick(ch) {
+      if (flag2 == 1) {
+        clearTimeout(flag);
+        var user = ch.id;
+        flag2 = 1;
+        // 가위
+        if (user == "sci_bt") {
+          u_out.src = imgArray[0];
+          if (com == 1) {
+            m_out.innerHTML = "DRAW";
+            c_out.src = imgArray[0];
+          } else if (com == 2) {
+            m_out.innerHTML = "DEFEAT";
+            c_out.src = imgArray[1];
+          } else {
+            m_out.innerHTML = "WIN";
+            c_out.src = imgArray[2];
+          }
+        }
+        if (user == "roc_bt") {
+          u_out.src = imgArray[1];
+          if (com == 1) {
+            m_out.innerHTML = "WIN";
+            c_out.src = imgArray[0];
+          } else if (com == 2) {
+            m_out.innerHTML = "DRAW";
+            c_out.src = imgArray[1];
+          } else {
+            m_out.innerHTML = "DEFEAT";
+            c_out.src = imgArray[2];
+          }
+        }
+        if (user == "pap_bt") {
+          u_out.src = imgArray[2];
+          if (com == 1) {
+            m_out.innerHTML = "DEFEAT";
+            c_out.src = imgArray[0];
+          } else if (com == 2) {
+            m_out.innerHTML = "WIN";
+            c_out.src = imgArray[1];
+          } else {
+            m_out.innerHTML = "DRAW";
+            c_out.src = imgArray[2];
+          }
+        }
+        flag2 = 0;
+      } else {
+        alert("시작 버튼을 눌러주세요!");
+        st_bt.style.background = "red";
+        return false;
+      }
+    }
+
+    function start() {
+      if (flag2 == 0) {
+        st_bt.style.background = "skyblue";
+        clearTimeout(flag);
+        flag = setTimeout(showImage, 100);
+        flag2 = 1;
+        m_out.innerHTML = "가위바위보!";
+      } else {
+        alert("한번만 눌러주세요!");
+        return false;
+      }
+    }
+  </script>
+</html>
