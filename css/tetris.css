@@ -67,12 +67,12 @@ td{
 }
 
 .sub_box h3{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 800;
 }
 
 .sub_box p{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -98,6 +98,7 @@ button {
 }
 
 .game_logo{
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -123,4 +124,8 @@ button {
 
 .a921{
     border-bottom-right-radius: 20px;
+}
+
+.help{
+    font-size: 10px;
 }
