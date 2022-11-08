@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 var score = document.getElementById("score");
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
-
+var levelup = 1240;
 // canvas.width = window.innerWidth - 100;
 // canvas.height = window.innerHeight - 300;
 var title = new Image();
@@ -16,9 +16,9 @@ var headline = {
   width: 100,
   height: 100,
   draw() {
-    if (count < 10000) {
+    if (count < levelup) {
       ctx.drawImage(title, headline.x, headline.y);
-    } else if (count >= 10000) {
+    } else if (count >= levelup) {
       ctx.drawImage(title2, headline.x, headline.y + 30);
     }
   },
@@ -43,18 +43,18 @@ var dino = {
     ctx.fillStyle = "green";
     anicount++;
     //ctx.fillRect(this.x, this.y, this.width, this.height);
-    if (count < 10000) {
+    if (count < levelup) {
       if (anicount <= 10) ctx.drawImage(img2, dino.x, dino.y);
       else if (anicount <= 20) {
         ctx.drawImage(img5, dino.x, dino.y);
       }
       if (anicount >= 20) anicount = 0;
-    } else if (count > 10000) {
-      if (anicount <= 10) ctx.drawImage(img6, dino.x, dino.y);
-      else if (anicount <= 20) {
+    } else if (count > levelup) {
+      if (anicount <= 7) ctx.drawImage(img6, dino.x, dino.y);
+      else if (anicount <= 14) {
         ctx.drawImage(img7, dino.x, dino.y);
       }
-      if (anicount >= 20) anicount = 0;
+      if (anicount >= 14) anicount = 0;
     }
   },
 };
@@ -108,6 +108,7 @@ class Cactus {
 }
 
 var score = document.getElementById("score");
+var out = "SCORE : ";
 var timer = 0;
 var cactuss = [];
 var clouds = [];
@@ -122,24 +123,48 @@ function ani() {
   count++;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (timer % 200 === 0) {
-    var cactus = new Cactus();
-    cactuss.push(cactus);
-  }
+  if (count > levelup) {
+    timer += 10;
+    if (timer % 160 === 0) {
+      var cactus = new Cactus();
+      cactuss.push(cactus);
+    }
 
-  if (timer % 100 === 0) {
-    var sand = new Sand();
-    sands.push(sand);
-  }
-  if (timer % 200 === 0) {
-    var cloud = new Cloud();
-    clouds.push(cloud);
-  }
-  if (timer % 450 === 0) {
-    var cactus = new Cactus();
-    cactuss.push(cactus);
-  }
+    if (timer % 60 === 0) {
+      var sand = new Sand();
+      sands.push(sand);
+    }
+    if (timer % 120 === 0) {
+      var cloud = new Cloud();
+      clouds.push(cloud);
+    }
+    if (timer % 390 === 0) {
+      var cactus = new Cactus();
+      cactuss.push(cactus);
+    }
+    if (timer % 540 === 0) {
+      var cactus = new Cactus();
+      cactuss.push(cactus);
+    }
+  } else {
+    if (timer % 200 === 0) {
+      var cactus = new Cactus();
+      cactuss.push(cactus);
+    }
 
+    if (timer % 100 === 0) {
+      var sand = new Sand();
+      sands.push(sand);
+    }
+    if (timer % 200 === 0) {
+      var cloud = new Cloud();
+      clouds.push(cloud);
+    }
+    if (timer % 450 === 0) {
+      var cactus = new Cactus();
+      cactuss.push(cactus);
+    }
+  }
   cactuss.forEach((a, i, o) => {
     //x좌표가 0미만 제거
     if (a.x < 0) {
@@ -179,11 +204,37 @@ function ani() {
     cancelAnimationFrame(animation);
     gameover();
   }
-  dino.draw();
   headline.draw();
-  score.innerHTML = "SCORE : " + parseInt(count / 10);
+  dino.draw();
+  if (count > 240) {
+    score.innerHTML = out + parseInt(count / 10 - 24);
+  } else score.innerHTML = out + 0;
   if (dino.y >= 480) jump_count = 2;
+  scoreColor = parseInt(count / 10 - 24);
+  if (scoreColor > 0 && scoreColor % 100 == 0 && !IsEffect) {
+    IsEffect = true;
+    console.log("진입");
+    effect();
+  }
 }
+var scoreColor;
+var scoreCnt = 0;
+var a;
+var IsEffect = false;
+function effect() {
+  a = setInterval(toggle, 200);
+}
+function toggle() {
+  $("#score").toggle();
+  scoreCnt++;
+
+  if (scoreCnt == 6) {
+    scoreCnt = 0;
+    IsEffect = false;
+    clearInterval(a);
+  }
+}
+
 ani();
 
 //충돌확인
