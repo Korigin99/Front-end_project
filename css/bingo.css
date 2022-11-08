@@ -42,7 +42,7 @@
 
 .result_wrap {
   /* flex-basis: 15%; */
-  width: 300px;
+  width: 280px;
   height: 580px;
   position: relative;
   border: 3px solid #2c70ee;

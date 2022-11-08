@@ -1,104 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📑 WORDLE GAME 📑</title>
-  <link rel="stylesheet" href="../css/wordle.css" />
-</head>
-<script src="../js/default.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-  crossorigin="anonymous"></script>
-<script>
-  $(document).ready(function () {
-    $("#a").on("click", function () {
-      $("#games").stop().slideToggle("fast");
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📑 WORDLE GAME 📑</title>
+    <link rel="stylesheet" href="../css/wordle.css" />
+  </head>
+  <script src="../js/default.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $("#a").on("click", function () {
+        $("#games").stop().slideToggle("fast");
+      });
     });
-  });
-</script>
-<script src="apple.js"></script>
-<link rel="stylesheet" href="../css/init.css" />
-<link rel="stylesheet" href="../css/default.css" />
-<link rel="stylesheet" href="../css/apple.css" />
+  </script>
+  <script src="apple.js"></script>
+  <link rel="stylesheet" href="../css/init.css" />
+  <link rel="stylesheet" href="../css/default.css" />
+  <link rel="stylesheet" href="../css/apple.css" />
 
-<body>
-  <div id="body">
-    <header id="header">
-      <div style="text-align: center">
-        <a href="index.html"><img id="img" src="../image/title.png" /></a>
-      </div>
-      <nav>
-        <div id="menu">
-          <div><a href="index.html"> HOME</a></div>
-          <div id="a">
-            GAME
-            <ul id="games">
-              <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
-              <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
-              <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
-              <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
-              <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
-              <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
-              <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
-              <li><a href="rsp.html">&nbsp;&nbsp; R.S.P GAME</a></li>
-              <li><a href="bingo.html">&nbsp;&nbsp; BINGO GAME</a></li>
-              <li><a href="dice.html">&nbsp;&nbsp; DICE GAME</a></li>
-            </ul>
-          </div>
-          <div>JOIN US</div>
-          <div>LOG IN</div>
+  <body>
+    <div id="body">
+      <header id="header">
+        <div style="text-align: center">
+          <a href="index.html"><img id="img" src="../image/title.png" /></a>
         </div>
-      </nav>
-    </header>
-    <h1 id="title">WORDLE</h1>
-    <hr />
-    <div id="wrap">
-      <div id="game_wrap">
-        <br />
-        <div id="board"></div>
-
-        <br />
-        <h1 id="answer"></h1>
-      </div>
-      <div id="dis_wrap">
-        <div id="dis_wrap">
-          <div id="dis">
-            <h5 align="center">📑 WORDLE GAME 📑</h5>
-            <br />
-            <p>
-              &nbsp; &nbsp; 게임의 궁극적인 목표는 정답단어를 맞추는 것입니다!
-              <br />
-              6번의 기회 안에 정답을 맞춰보세요!!
-              <br />
-              <span>- 게임방법 -</span><br />
-            </p>
-            <br />
+        <nav>
+          <div id="menu">
+            <div><a href="index.html"> HOME</a></div>
+            <div id="a">
+              GAME
+              <ul id="games">
+                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+                <li><a href="rsp.html">&nbsp;&nbsp; R.S.P GAME</a></li>
+                <li><a href="bingo.html">&nbsp;&nbsp; BINGO GAME</a></li>
+                <li><a href="dice.html">&nbsp;&nbsp; DICE GAME</a></li>
+              </ul>
+            </div>
+            <div>JOIN US</div>
+            <div>LOG IN</div>
           </div>
-          <div id="dis">
-            <h5 align="center">* 게임방법 *</h5>
-            <br />
-            <p>
-              주어진 6번의 기회 안에 정답 단어를 추측해보세요!
-              <br />답안을 제출하면 프로그램이 제출된 단어의 알파벳의 종류와
-              위치를 비교해 판별합니다. <br />
-              판별 결과는 타일이 세가지 색 중 하나로 바뀌면서 표현됩니다.
+        </nav>
+      </header>
+      <h1 id="title">WORDLE</h1>
+      <hr />
+      <div id="wrap">
+        <div id="game_wrap">
+          <br />
+          <div id="board"></div>
+
+          <br />
+          <h1 id="answer"></h1>
+        </div>
+        <div id="dis_wrap">
+          <div id="dis_wrap">
+            <div id="dis">
+              <h5 align="center">📑 WORDLE GAME 📑</h5>
               <br />
+              <p>
+                &nbsp; &nbsp; 게임의 궁극적인 목표는 정답단어를 맞추는 것입니다!
+                <br />
+                6번의 기회 안에 정답을 맞춰보세요!!
+                <br />
+                <span>- 게임방법 -</span><br />
+              </p>
               <br />
-              &nbsp; * 파란색 : 정답 단어의 알파펫 종류와 위치가 모두 일치
+            </div>
+            <div id="dis">
+              <h5 align="center">* 게임방법 *</h5>
               <br />
-              &nbsp; * 노란색 : 정답 단어에 들어가는 알파펫이지만 위치가
-              불일치
-              <br />
-              &nbsp; * 회색: 정답 단어에 없는 알파벳
-            </p>
+              <p>
+                주어진 6번의 기회 안에 정답 단어를 추측해보세요!
+                <br />답안을 제출하면 프로그램이 제출된 단어의 알파벳의 종류와
+                위치를 비교해 판별합니다. <br />
+                판별 결과는 타일이 세가지 색 중 하나로 바뀌면서 표현됩니다.
+                <br />
+                <br />
+                &nbsp; * 파란색 : 정답 단어의 알파펫 종류와 위치가 모두 일치
+                <br />
+                &nbsp; * 노란색 : 정답 단어에 들어가는 알파펫이지만 위치가
+                불일치
+                <br />
+                &nbsp; * 회색: 정답 단어에 없는 알파벳
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-<script src="../js/wordle.js"></script>
-
+  </body>
+  <script src="../js/wordle.js"></script>
 </html>
