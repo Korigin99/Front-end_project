@@ -34,13 +34,13 @@
       );
     </script>
     <link rel="stylesheet" href="../css/init.css" />
-    <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/dice.css" />
-    <script src="../js/dice.js"></script>
+    <link rel="stylesheet" href="../css/default.css" />
+
   </head>
 
-  <body>
-    <div id="body">
+  <body  onload="showImage()">
+    <div id="body" >
       <header id="header">
         <div style="text-align: center">
           <a href="index.html"><img id="img" src="../image/title.png" /></a>
@@ -68,44 +68,30 @@
       <!-- 헤드 만들기 -->
       <div id="wholewrap">
         <div id="gamewrap">
-        <div id="title">
-          <div class="title"><h2>주사위 굴리기</h2></div>
-        </div>
-        <div id="piece">
-          <span class="text">주사위 개수 : 3개</span>
-          <span class="dis">(최소값 : 3 ~ 최대값 : 18)</span>
-        </div>
-        <!-- 바디 만들기 -->
-        <div id="middle">
-          <div id="ju"><p>컴퓨터 주사위</p></div>
-          <div id="comgame">
-            <div id="dice4">
-              <img src="../image/1.jpg" alt="img" id="img4" />
+          <div id="mask">
+            <div id="display_wrap">
+                <div id="user_dp">
+                    <div class="title" id="user_title">user</div>
+                    <div class="img_box">
+                        <div id="user_dp1" class="dp_img"><img src="" id="user_img1" class="dp"></div>
+                        <div id="user_dp2" class="dp_img"><img src="" id="user_img2" class="dp"></div>
+                        <div id="user_dp3" class="dp_img"><img src="" id="user_img3" class="dp"></div>
+                    </div>
+                </div>
+                <div id="com_dp">
+                    <div class="title" id="com_title">com</div>
+                    <div class="img_box">
+                        <div id="com_dp1" class="dp_img"><img src="" id="com_img1" class="dp"></div>
+                        <div id="com_dp2" class="dp_img"><img src="" id="com_img2" class="dp"></div>
+                        <div id="com_dp3" class="dp_img"><img src="" id="com_img3" class="dp"></div>
+                    </div>
+                </div>
             </div>
-            <div id="dice5">
-              <img src="../image/1.jpg" alt="img" id="img5" />
+            <div id="ment_wrap">승자는??</div>
+            <div id="ctrl_wrap">
+                <button onclick="doClick()" id="start">주사위 굴리기</button>
+                <button id="retry" onclick="reTry()">시작</button>
             </div>
-            <div id="dice6">
-              <img src="../image/1.jpg" alt="img" id="img6" />
-            </div>
-          </div>
-          <div id="jut"><p>내 주사위</p></div>
-          <div id="game">
-            <div id="dice1">
-              <img src="../image/1.jpg" alt="img" id="img1" />
-            </div>
-            <div id="dice2">
-              <img src="../image/1.jpg" alt="img" id="img2" />
-            </div>
-            <div id="dice3">
-              <img src="../image/1.jpg" alt="img" id="img3" />
-            </div>
-          </div>
-          <button class="push" onclick="result()">주사위 굴리기</button>
-        </div>
-        <!-- 결과 만들기 -->
-        <div id="result">
-          <div id="final"></div>
         </div>
       </div>
       <div>
@@ -135,5 +121,5 @@
       </div>
     </div></div>
   </body>
- 
+  <script src="../js/dice.js"></script>
 </html>
