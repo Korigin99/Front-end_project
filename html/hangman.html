@@ -1,110 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>😎 HANGMAN GAME 😎</title>
-    <script src="../js/default.js"></script>
-    <link rel="stylesheet" href="../css/hangman.css" />
-    <script src="../js/hangman.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(document).ready(function () {
-        $("#a").on("click", function () {
-          $("#games").stop().slideToggle("fast");
-        });
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>😎 HANGMAN GAME 😎</title>
+  <script src="../js/default.js"></script>
+  <link rel="stylesheet" href="../css/hangman.css" />
+  <script src="../js/hangman.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $("#a").on("click", function () {
+        $("#games").stop().slideToggle("fast");
       });
-    </script>
-    <script>
-      document.body.addEventListener(
-        "touchstart",
-        function (e) {
-          if (e.touches.length > 1 || e.targetTouches.length > 1) {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          }
-        },
-        { passive: false }
-      );
-    </script>
+    });
+  </script>
+  <script>
+    document.body.addEventListener(
+      "touchstart",
+      function (e) {
+        if (e.touches.length > 1 || e.targetTouches.length > 1) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+      },
+      { passive: false }
+    );
+  </script>
 
-    <link rel="stylesheet" href="../css/init.css" />
-    <link rel="stylesheet" href="../css/default.css" />
-  </head>
+  <link rel="stylesheet" href="../css/init.css" />
+  <link rel="stylesheet" href="../css/default.css" />
+</head>
 
-  <body>
-    <div id="body">
-      <header id="header">
-        <div style="text-align: center">
-          <a href="index.html"><img id="img" src="../image/title.png" /></a>
-        </div>
-        <nav>
-          <div id="menu">
-            <div><a href="index.html"> HOME</a></div>
-            <div id="a">
-              GAME
-              <ul id="games">
-                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
-                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
-                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
-                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
-                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
-                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
-                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
-              </ul>
-            </div>
-            <div><a href="join.html">JOIN US</a></div>
-            <div><a href="login.html"> LOG IN</a></div>
+<body>
+  <div id="body">
+    <header id="header">
+      <div style="text-align: center">
+        <a href="index.html"><img id="img" src="../image/title.png" /></a>
+      </div>
+      <nav>
+        <div id="menu">
+          <div><a href="index.html"> HOME</a></div>
+          <div id="a">
+            GAME
+            <ul id="games">
+              <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+              <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+              <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+              <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+              <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+              <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+              <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              <li><a href="rsp.html">&nbsp;&nbsp; R.S.P GAME</a></li>
+              <li><a href="bingo.html">&nbsp;&nbsp; BINGO GAME</a></li>
+              <li><a href="dice.html">&nbsp;&nbsp; DICE GAME</a></li>
+            </ul>
           </div>
-        </nav>
-      </header>
-      <div class="body">
-        <div id="wrap">
-          <p class="title"> Hangman </p>
-          <p class="description">
-            Use the alphabet below to guess the word, <br />or click hint to ge
-            a clue.
-          </p>
-          <div id="buttons"></div>
-          <div id="categoryName"></div>
-          <div id="hold"></div>
-          <div id="mylives"></div>
-          <div id="clue"></div>
-          <canvas id="stickman"></canvas>
-          <div>
-            <button id="hint">hint</button>
-            <button id="reset">play again</button>
-          </div>
+          <div><a href="join.html">JOIN US</a></div>
+          <div><a href="login.html"> LOG IN</a></div>
         </div>
-
+      </nav>
+    </header>
+    <div class="body">
+      <div id="wrap">
+        <p class="title"> Hangman </p>
+        <p class="description">
+          Use the alphabet below to guess the word, <br />or click hint to ge
+          a clue.
+        </p>
+        <div id="buttons"></div>
+        <div id="categoryName"></div>
+        <div id="hold"></div>
+        <div id="mylives"></div>
+        <div id="clue"></div>
+        <canvas id="stickman"></canvas>
         <div>
-          <div id="dis_wrap">
-            <div id="dis">
-              <p>
-                <h5 align="center"> 😎 행맨게임 😎 </h5><br /><br />
-                알파벳을 선택해서 단어를 맞춰보세요!<br />
-                단어 안에 선택한 알파벳이 없을 경우 라이프가 하나 깎입니다.<br />
-                라이프를 모두 잃기 전에 단어를 맞춰보세요!
-              </p>
-            </div>
-            <div id="dis">
-              <h5 align="center">* 게임방법 *</h5>
-              <p><br />
+          <button id="hint">hint</button>
+          <button id="reset">play again</button>
+        </div>
+      </div>
+
+      <div>
+        <div id="dis_wrap">
+          <div id="dis">
+            <p>
+            <h5 align="center"> 😎 행맨게임 😎 </h5><br /><br />
+            알파벳을 선택해서 단어를 맞춰보세요!<br />
+            단어 안에 선택한 알파벳이 없을 경우 라이프가 하나 깎입니다.<br />
+            라이프를 모두 잃기 전에 단어를 맞춰보세요!
+            </p>
+          </div>
+          <div id="dis">
+            <h5 align="center">* 게임방법 *</h5>
+            <p><br />
               알파벳을 선택해서 라이프를 모두 잃기 전에 답을 맞춰보세요!<br />
               <br /> <b>* 패배</b> : 라이프가 깎일 때마다 행맨이 그려지며, 라이프가
-                모두 사용되면 게임에서 패배.<br /><br />
-                <b>* 승리</b> : 라이프가 깎이기 전에 단어를 맞추면 승리<br />
-              </p>
-            </div>
+              모두 사용되면 게임에서 패배.<br /><br />
+              <b>* 승리</b> : 라이프가 깎이기 전에 단어를 맞추면 승리<br />
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
