@@ -1,11 +1,11 @@
 body{ margin: 0; padding: 0; box-sizing: border-box;}
 #mask{
-    width: 600px;
+    width: 1200px;
     height: auto;
-    border: 1px solid #E8D9FF;
-    margin: 150px auto;
     display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-evenly;
 }
 #display_wrap{
     width: 600px;
@@ -18,12 +18,12 @@ body{ margin: 0; padding: 0; box-sizing: border-box;}
     padding: 5px;
     position: relative;
 }
-#user_dp{  border-right: 1px solid #E8D9FF;}
+#user_dp{  border-right: 3px solid #2c70ee;}
 #ment_wrap{
     width: 590px;
     height: 90px;
-    border-top: 1px solid #E8D9FF;
-    border-bottom: 1px solid #E8D9FF;
+    border-top: 3px solid #2c70ee;
+    border-bottom: 3px solid #2c70ee;
     padding: 5px
 }
 #ment, #retry{
@@ -45,7 +45,7 @@ body{ margin: 0; padding: 0; box-sizing: border-box;}
     padding: 5px;
     cursor: pointer;
 }
-#roc_bt{ border-right: 1px solid #E8D9FF; border-left: 1px solid #E8D9FF;}
+#roc_bt{ border-right: 3px solid #2c70ee; border-left: 3px solid #2c70ee;}
 #user_img, #com_img{
     position: absolute;
     max-width: 100%;
@@ -54,19 +54,41 @@ body{ margin: 0; padding: 0; box-sizing: border-box;}
     transform: translateX(-50%);
 }
 img{ max-width: 100%;}
-.bt:active{ border: 1px solid red;}
+.bt:active{ background: #2c70ee;}
 #start{
     width: 100px;
     height:  50px;
     font-size: 20px;
     font-weight: 700;
     color: white;
-    background: lightblue;
+    background: #2c70ee;
     border: none;
-    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 20px;
 }
-#start:active{
-    border: 1px solid skyblue;
-    background: white;
-    color: skyblue;
+
+.game-wrap{
+    width: 50%;
+    height: auto;
+    border: 3px solid #2c70ee;
+    border-radius: 20px;
+}
+
+.game-rule{
+    width: 20%;
+    height: 180px;
+    text-align: center;
+    border: 3px solid #2c70ee;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.game-rule h2{
+    font-size: 25px;
+}
+
+.game-rule p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
 }
