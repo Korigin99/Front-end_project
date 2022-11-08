@@ -70,6 +70,19 @@
   position: relative;
 }
 
+.container{
+  margin-top: 200px;
+}
+
+.py-3{
+  text-align: center;
+}
+
+.nav-item{
+  width: 10%;
+}
+
+
 
 
 /* a{
