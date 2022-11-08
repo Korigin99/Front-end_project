@@ -229,7 +229,7 @@ function comTurn() {
               if (comCheck[j][j] != true) {
                 comCheck[j][j] = true;
                 comDiv2[j][j].style.background = "#2c70ee";
-                comDiv2[j][j].style.color = "black";
+                comDiv2[j][j].style.color = "white";
                 comFlag = 0;
                 res.innerHTML = "유저 차례";
                 for (var k = 0; k < 25; k++) {
@@ -260,7 +260,7 @@ function comTurn() {
                 comCheck[rowRan][colRan] != true
               ) {
                 comDiv2[temp2][colRan].style.background = "#2c70ee";
-                comDiv2[temp2][colRan].style.color = "black";
+                comDiv2[temp2][colRan].style.color = "white";
                 comCheck[temp2][colRan] = true;
                 console.log("hi");
                 console.log(comCheck);
