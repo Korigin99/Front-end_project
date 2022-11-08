@@ -1,0 +1,124 @@
+body,
+div,
+ul,
+li,
+button,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wholewrap {
+  display: flex;
+}
+#gamewrap {
+  margin-top: 30px;
+  width: 900px;
+  height: 950px;
+  border: 3px solid #2c70ee;
+  border-radius: 20px;
+}
+#title {
+  width: 900px;
+  height: 100px;
+  margin-top: 20px;
+  border-bottom: 1px solid #2c70ee;
+  text-align: center;
+}
+h2 {
+  font-size: 40px;
+}
+.title {
+  width: 900px;
+  height: 100px;
+  line-height: 60px;
+  text-align: center;
+}
+#piece {
+  width: 900px;
+  height: 50px;
+  line-height: 50px;
+  text-align: end;
+  padding-right: 20px;
+  border-bottom: 1px solid #2c70ee;
+}
+.dis {
+  color: gray;
+}
+#middle {
+  width: 900px;
+  height: 600px;
+  text-align: center;
+}
+#result {
+  width: 900px;
+  height: 150px;
+}
+#final {
+  line-height: 0px;
+}
+
+#comgame {
+  width: 900px;
+  height: 100px;
+  padding-left: 280px;
+  margin-bottom: 20px;
+  display: flex;
+}
+#dice4,
+#dice5,
+#dice6 {
+  width: 70px;
+  height: 100px;
+  margin-right: 50px;
+}
+#dice4 img,
+#dice5 img,
+#dice6 img {
+  width: 100px;
+  height: 100px;
+}
+
+#game {
+  width: 900px;
+  height: 260px;
+  display: flex;
+}
+#dice1,
+#dice2,
+#dice3 {
+  width: 250px;
+  height: 200px;
+  text-align: center;
+}
+#dice1 img,
+#dice2 img,
+#dice3 img {
+  width: 200px;
+  height: 200px;
+}
+#ju {
+  font-size: 20px;
+  font-weight: 800;
+  height: 40px;
+  line-height: 40px;
+}
+#jut {
+  font-size: 30px;
+  font-weight: 800;
+  height: 60px;
+  line-height: 60px;
+}
+.push {
+  width: 500px;
+  height: 80px;
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: 800;
+  border-radius: 20px;
+  border: 3px solid #2c70ee;
+}
+#dis {
+  width: 280px;
+  text-align: left;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎲 DICE GAME 🎲</title>
+    <script src="../js/default.js"></script>
+    <link rel="stylesheet" href="../css/hangman.css" />
+    <script src="../js/hangman.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#a").on("click", function () {
+          $("#games").stop().slideToggle("fast");
+        });
+      });
+    </script>
+    <script>
+      document.body.addEventListener(
+        "touchstart",
+        function (e) {
+          if (e.touches.length > 1 || e.targetTouches.length > 1) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+        },
+        { passive: false }
+      );
+    </script>
+    <link rel="stylesheet" href="../css/init.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/dice.css" />
+    <script src="../js/dice.js"></script>
+  </head>
+
+  <body>
+    <div id="body">
+      <header id="header">
+        <div style="text-align: center">
+          <a href="index.html"><img id="img" src="../image/title.png" /></a>
+        </div>
+        <nav>
+          <div id="menu">
+            <div><a href="index.html"> HOME</a></div>
+            <div id="a">
+              GAME
+              <ul id="games">
+                <li><a href="wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+                <li><a href="fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+                <li><a href="maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+                <li><a href="tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+                <li><a href="chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+                <li><a href="hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+                <li><a href="2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              </ul>
+            </div>
+            <div><a href="join.html">JOIN US</a></div>
+            <div><a href="login.html"> LOG IN</a></div>
+          </div>
+        </nav>
+      </header>
+      <!-- 헤드 만들기 -->
+      <div id="wholewrap">
+        <div id="gamewrap">
+        <div id="title">
+          <div class="title"><h2>주사위 굴리기</h2></div>
+        </div>
+        <div id="piece">
+          <span class="text">주사위 개수 : 3개</span>
+          <span class="dis">(최소값 : 3 ~ 최대값 : 18)</span>
+        </div>
+        <!-- 바디 만들기 -->
+        <div id="middle">
+          <div id="ju"><p>컴퓨터 주사위</p></div>
+          <div id="comgame">
+            <div id="dice4">
+              <img src="../image/1.jpg" alt="img" id="img4" />
+            </div>
+            <div id="dice5">
+              <img src="../image/1.jpg" alt="img" id="img5" />
+            </div>
+            <div id="dice6">
+              <img src="../image/1.jpg" alt="img" id="img6" />
+            </div>
+          </div>
+          <div id="jut"><p>내 주사위</p></div>
+          <div id="game">
+            <div id="dice1">
+              <img src="../image/1.jpg" alt="img" id="img1" />
+            </div>
+            <div id="dice2">
+              <img src="../image/1.jpg" alt="img" id="img2" />
+            </div>
+            <div id="dice3">
+              <img src="../image/1.jpg" alt="img" id="img3" />
+            </div>
+          </div>
+          <button class="push" onclick="result()">주사위 굴리기</button>
+        </div>
+        <!-- 결과 만들기 -->
+        <div id="result">
+          <div id="final"></div>
+        </div>
+      </div>
+      <div>
+        <div id="dis_wrap">
+          <div id="dis">
+            <p>
+              <h5 align="center"> 🎲 DICE GAME 🎲 </h5><br />
+              주사위를 굴려보세요!<br />
+              확률은 반반!<br>
+              컴퓨터와의 주사위게임에서 승리해보세요!<br />
+
+            </p>
+          </div>
+          <div id="dis">
+            <h5 align="center">* 게임방법 *</h5>
+            <p><br />
+            &nbsp; 버튼을 클릭해서 주사위를 굴려보세요!<br />
+            &nbsp;주사위를 합친 값이 더 높은 사람이 승리합니다!
+            <br /><br /> <b>* 특수사항</b> <br>
+           - 주사위가 모두 1인 경우<br>
+           &nbsp;: 이 경우에는 가장 높은 값을 가져 승리합니다. <br /><br />
+           - 주사위가 모두 3인 경우<br>
+           &nbsp;: 이 경우에는 주사위가 모두 1인 경우를 제외한 가장 높은 값을 가집니다.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </body>
+ 
+</html>
