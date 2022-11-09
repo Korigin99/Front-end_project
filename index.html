@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 네이버 도메인 등록 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="keywords" content="스낵게임, 인스턴트게임, html게임, js게임, 퍼즐게임" />
+  <meta name="title" content="SNACKGAME" />
+  <meta name="description" content="스낵게임, 인스턴트게임, html게임, js게임, 퍼즐게임" />
+  <meta property="article:author" content="SNACKGAME" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/image/titel.png" />
+  <meta property="og:title" content="SNACKGAME" />
+  <meta property="og:url" content="http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com" />
+  <meta property="og:description" content="스낵게임, 인스턴트게임, html게임, js게임, 퍼즐게임" />
+  <meta property="og:site_name" content="SNACKGAME" />
+  <meta property="og:locale" content="ko-KR" />
+
+  <meta name="naver-site-verification" content="7639d227b2739e403f31bf0994f4e1c9f1dc9d8a" />
+  <meta name="NaverBot" content="All" />
+  <meta name="NaverBot" content="index,follow" />
+  <meta name="Yeti" content="All" />
+  <meta name="Yeti" content="index,follow" />
+  <!-- 네이버 도메인 등록 끝 -->
+  <title>👑 SNACK GAME</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $("#a").on("click", function () {
+      $("#games").stop().slideToggle("fast");
+    });
+  });
+</script>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" href="../css/init.css" />
+<link rel="stylesheet" href="../css/index.css" />
+
+<body>
+  <div id="body">
+    <header id="header">
+      <div style="text-align: center" class="logo-wrap">
+        <a href="index.html"><img id="img" src="../image/title.png" /></a>
+      </div>
+      <nav>
+        <div id="menu">
+          <div><a href="index.html"> HOME</a></div>
+          <div id="a">
+            <span>GAME</span>
+            <ul id="games">
+              <li><a href="html/wordle.html">&nbsp;&nbsp; WORDLE GAME</a></li>
+              <li><a href="html/fruit.html">&nbsp;&nbsp; FRUIT GAME</a></li>
+              <li><a href="html/maze.html">&nbsp;&nbsp; MAZE GAME</a></li>
+              <li><a href="html/tetris.html">&nbsp;&nbsp; TETRIS GAME</a></li>
+              <li><a href="html/chick.html">&nbsp;&nbsp; CHICK GAME</a></li>
+              <li><a href="html/hangman.html">&nbsp;&nbsp; HANGMAN GAME</a></li>
+              <li><a href="html/2048.html">&nbsp;&nbsp; 2048 GAME</a></li>
+              <li><a href="html/rsp.html">&nbsp;&nbsp; R.S.P GAME</a></li>
+              <li><a href="html/bingo.html">&nbsp;&nbsp; BINGO GAME</a></li>
+              <li><a href="html/dice.html">&nbsp;&nbsp; DICE GAME</a></li>
+            </ul>
+          </div>
+          <div><a href="html/join.html">JOIN US</a></div>
+          <div><a href="html/login.html"> LOG IN</a></div>
+        </div>
+      </nav>
+    </header>
+    <div class="main-wrap">
+      <div class="main-left">
+        <div class="left-top">
+          <div class="left-top-left">
+            <div class="left-top-left-top">
+              <div class="game-box">
+                <a href="html/wordle.html">
+                  <img src="../image/wordle.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="left-top-left-bottom">
+              <div class="game-box">
+                <a href="html/maze.html">
+                  <img src="../image/maze.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="left-top-right">
+            <div class="game-box tetris-box">
+              <a href="html/tetris.html">
+                <img src="../image/tetris.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="left-bottom">
+          <div class="left-bottom-left">
+            <div class="game-box fruit-box">
+              <a href="fruit.html">
+                <img src="../image/fruit.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="left-bottom-right">
+            <div class="game-box num-box">
+              <a href="html/2048.html"> <img src="../image/2048.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="right-top">
+          <div class="game-box hangman-box">
+            <a href="html/hangman.html">
+              <img src="../image/hangman.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="right-middle">
+          <div class="middle-left">
+            <div class="game-box">
+              <a href="html/chick.html">
+                <img src="../image/chick.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="middle-right">
+            <div class="game-box">
+              <a href="html/dice.html"> <img src="../image/dice.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <div class="bottom-left">
+            <div class="game-box">
+              <a href="html/bingo.html">
+                <img src="../image/bingo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="bottom-right">
+            <div class="game-box">
+              <a href="html/rsp.html"> <img src="../image/rsp.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="html/login.html" class="nav-link px-2 text-muted">Login</a></li>
+        <li class="nav-item"><a href="html/join.html" class="nav-link px-2 text-muted">Join</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; SNACKGAME Company, Inc</p>
+    </footer>
+  </div>
+</body>
+
+</html>
