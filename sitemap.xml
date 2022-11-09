@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	  	  
+<!-- www.check-domains.com sitemap generator -->
+
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/</loc>
+   <lastmod>2022-11-09T08:22:45+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>1.0000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/index.html</loc>
+   <lastmod>2022-11-09T08:22:45+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/wordle.html</loc>
+   <lastmod>2022-11-09T08:04:19+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/fruit.html</loc>
+   <lastmod>2022-11-09T08:04:33+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/maze.html</loc>
+   <lastmod>2022-11-09T08:04:18+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/tetris.html</loc>
+   <lastmod>2022-11-09T08:04:18+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/chick.html</loc>
+   <lastmod>2022-11-09T08:04:32+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/hangman.html</loc>
+   <lastmod>2022-11-09T08:04:33+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/2048.html</loc>
+   <lastmod>2022-11-09T08:04:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/rsp.html</loc>
+   <lastmod>2022-11-09T08:04:18+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/bingo.html</loc>
+   <lastmod>2022-11-09T08:04:32+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/dice.html</loc>
+   <lastmod>2022-11-09T08:04:32+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/join.html</loc>
+   <lastmod>2022-11-09T08:04:34+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/login.html</loc>
+   <lastmod>2022-11-09T08:04:34+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>http://snackgame.dev.s3-website-ap-northeast-1.amazonaws.com/html/index.html</loc>
+   <lastmod>2022-11-09T08:04:33+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
