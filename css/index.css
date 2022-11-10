@@ -122,6 +122,35 @@
   max-height: 90%;
 }
 
+.footer{
+  width: 100%;
+  height: auto;
+  line-height: 40px;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 15px;
+  /* font-weight: 600; */
+
+}
+
+.nav-ul{
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.nav-li{
+  width: 20%;
+}
+
+.nav-li a{
+  color: #8f8f8f;
+}
+
+.footer-p{
+  color: #8f8f8f;
+}
+
 @media all and (max-width:1100px) {
   .game-box img{
     max-height: 90%;
