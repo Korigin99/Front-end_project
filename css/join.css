@@ -9,8 +9,7 @@ body, ul, li, a,h1,h2,h3,h4,h5,h6{
 .container{
     width: 360px;
     height: auto;
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 5% auto;
 }
 
 /* header */

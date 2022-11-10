@@ -122,11 +122,6 @@
   max-height: 90%;
 }
 
-.nav-item{
-  width: 33%;
-}
-
-
 @media all and (max-width:1100px) {
   .game-box img{
     max-height: 90%;
