@@ -1,6 +1,6 @@
 # Snack Game 
-## Font-end Project
 <img src="mediamodifier_image.png">
+## Font-end Project
 - 프로젝트 조건
   - html, js, css 활용하여 만드는 프로젝트 ( Java 금지)
   - 반응형 웹사이트 제작할 것
